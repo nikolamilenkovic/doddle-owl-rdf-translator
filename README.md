@@ -40,6 +40,7 @@ This will translate the file with contents like this
 ```
 to equivalent file with translated contents
 ```xml
+	...
 	<owl:disjointWith>
 		<owl:Class rdf:ID="курс"></owl:Class>
 	</owl:disjointWith>
@@ -52,3 +53,6 @@ to equivalent file with translated contents
 	<rdfs:label xml:lang="sr">курс</rdfs:label>
 	...
 ```
+
+## License
+MIT
