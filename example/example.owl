@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="file:/C:/Users/emhimed/Desktop/myprog/New%20Folder/mytest.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://www.w3.org/2004/02/skos/core#"
+  xml:base="file:/C:/Users/emhimed/Desktop/myprog/New%20Folder/mytest.owl">
+  <owl:Ontology rdf:about="file:/C:/Users/emhimed/Desktop/myprog/New%20Folder/mytest.owl"/>
+  <owl:Class rdf:ID="program">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="act"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">a performance (or series of performances) at a public presentation; "the program lasted more than two hours"</rdfs:comment>
+    
+    <owl:disjointWith>
+      <owl:Class rdf:ID="course"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">program</rdfs:label>
+    
+  </owl:Class>
+  <owl:Class rdf:about="#course">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#act"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">course</rdfs:label>
+    <rdfs:comment xml:lang="en">a mode of action; "if you persist in that course you will surely fail"; "once a nation is embarked on a course of action it becomes extremely difficult for any retraction to take place"</rdfs:comment>
+    <owl:disjointWith rdf:resource="#program"/>
+  </owl:Class>
+  <owl:Class rdf:about="#act">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="discipline"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">something that people do or cause to happen</rdfs:comment>
+        <rdfs:label xml:lang="en">act</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#discipline">
+    <owl:disjointWith rdf:resource="#act"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="use"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">a system of rules of conduct or method of practice; "he quickly learned the discipline of prison routine" or "for such a plan to work requires discipline";</rdfs:comment>
+    <rdfs:label xml:lang="en">discipline</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#use">
+    <owl:disjointWith rdf:resource="#discipline"/>
+    <rdfs:comment xml:lang="en">what something is used for; "the function of an auger is to bore holes"; "ballet is beautiful but what use is it?"</rdfs:comment>
+    <rdfs:label xml:lang="en">use</rdfs:label>
+  </owl:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.8, Build 629)  http://protege.stanford.edu -->
