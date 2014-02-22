@@ -21,7 +21,7 @@ owl-transform.xsl depends on dictionary.xml which contains mappings from English
 ## Usage
 In order to perform the translation of the DODDLE-OWL file, an XSLT processor is required. In the example below, [msxsl](http://www.microsoft.com/en-us/download/details.aspx?id=21714) is used.
 
-> msxsl.exe example\example.owl owl-transform.xsl -o example\out.owl
+    msxsl.exe example\example.owl owl-transform.xsl -o example\out.owl
 
 This will translate the file with contents like this
 ```xml
@@ -43,12 +43,12 @@ to equivalent file with translated contents
 	<owl:disjointWith>
 		<owl:Class rdf:ID="курс"></owl:Class>
 	</owl:disjointWith>
-	<rdfs:label xml:lang="ar">програм</rdfs:label>
+	<rdfs:label xml:lang="sr">програм</rdfs:label>
 </owl:Class>
 <owl:Class rdf:about="#курс">
 	<rdfs:subClassOf>
 		<owl:Class rdf:about="#glumiti"></owl:Class>
     </rdfs:subClassOf>
-	<rdfs:label xml:lang="ar">курс</rdfs:label>
+	<rdfs:label xml:lang="sr">курс</rdfs:label>
 	...
 ```
