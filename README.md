@@ -50,6 +50,7 @@ to equivalent file with translated contents
 	<rdfs:subClassOf>
 		<owl:Class rdf:about="#glumiti"></owl:Class>
     </rdfs:subClassOf>
+	<rdfs:label xml:lang="en">course</rdfs:label>
 	<rdfs:label xml:lang="sr">курс</rdfs:label>
 	...
 ```
