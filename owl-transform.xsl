@@ -7,6 +7,8 @@
 	<xsl:output method="xml" indent="yes"/>
 
 	<xsl:variable name="dict" select="document('dictionary.xml')/*" />
+	<xsl:variable name="sourceLanguage" select="$dict/@from" />
+	<xsl:variable name="targetLanguage" select="$dict/@to" />
 	
     <xsl:template match="@* | node()">
         <xsl:copy>
@@ -20,8 +22,8 @@
 	
 	<xsl:template match="rdfs:label">
 		<xsl:variable name="word" select="." />
-		<rdfs:label xml:lang="en"><xsl:value-of select="$word"/></rdfs:label>
-		<rdfs:label xml:lang="ar"><xsl:value-of select="$dict/word[@name=$word]"/></rdfs:label>
+		<rdfs:label xml:lang="{$sourceLanguage}"><xsl:value-of select="$word"/></rdfs:label>
+		<rdfs:label xml:lang="{$targetLanguage}"><xsl:value-of select="$dict/word[@name=$word]"/></rdfs:label>
 	</xsl:template>
 	
 	<xsl:template match="owl:Class">
